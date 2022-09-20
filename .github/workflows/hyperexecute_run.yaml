@@ -1,0 +1,16 @@
+name: hyperexecute_run
+on: push
+jobs:
+  golangci:
+    name: hyperexecute grid testing
+    runs-on: windows-latest
+    steps:
+      # checkout the repo
+      - name: 'Checkout GitHub Action'
+        uses: actions/checkout@main
+
+      - name: 'check env var'
+        run: env | sort
+
+      - name: run test
+        run: hyperexecute.exe --user testmsftplan123 --key pZomzOu2tU6WL7oDx8xuN5X5lkoY8RpG00KaIh5aX9SgiJyBxD --config yaml/win/.hyperexecute_autosplits.yaml --env stage --verbose

@@ -19,7 +19,7 @@ const caps_chromium = {
 module.exports = {
     connectOptions: {
         chromium: {
-          wsEndpoint: `wss://cdp.lambdatest.com/playwright?capabilities=${encodeURIComponent(JSON.stringify(caps_chromium))}`
+          wsEndpoint: `wss://stage-cdp.lambdatest.com/playwright?capabilities=${encodeURIComponent(JSON.stringify(caps_chromium))}`
         }
       },
       browsers: ['chromium'],

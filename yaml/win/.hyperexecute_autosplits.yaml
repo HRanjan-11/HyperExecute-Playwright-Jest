@@ -6,6 +6,7 @@ testSuiteStep: 90
 runson: win
 autosplit: true
 retryOnFailure: false
+testType: "playwright"
 maxRetries: 5
 concurrency: 3
 pre:
